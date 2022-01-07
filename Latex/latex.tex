@@ -1,0 +1,259 @@
+\documentclass{article}
+
+\usepackage{mathtools} 
+\usepackage{amsmath}
+\usepackage{xcolor}
+\usepackage{url}
+\usepackage{algpseudocode}
+\usepackage{cite} 
+\usepackage{algorithm}
+\usepackage{hhline}
+\usepackage{multirow}
+\usepackage[utf8]{inputenc}
+
+
+%cover page
+\begin{document}
+\title{Assignment}
+{\author{Gokarakonda Sri Sai Asish\\
+\texttt{200010017@iitdh.ac.in}\\\\
+Department of Computer Science,IIT Dharwad \\\\}}
+\date{August 6, 2021}
+%cover page
+% This is used then only the above cover page is displayed
+\maketitle
+
+\newpage %new page command
+%these below commands will automatically give list of contents,figures,table
+\tableofcontents
+\listoffigures
+\listoftables
+
+\newpage %new page command
+
+                            % Mathematics section starting
+
+\section{Mathematics}
+\label{sec :m} %labelling so that we can do cross referencing
+In this section, various mathematical formulae and equations will be included to include all the feature mentioned in the assignment. Very low mass particles moving at speed less than that of light behaves like a particle and wave. De Broglie derived an expression relating the mass of such smaller particles and its wavelength.
+
+Plank's quantum theory relates the energy of an electromagnetic wave to its wavelength or frequency.
+\vspace{4mm}
+% aligning equations
+\begin{align}
+E &= h v \nonumber \\
+  &= \frac{hc}{\lambda}
+\end{align}
+Einstein related the energy of particle matter to its mass and velocity, as 
+% aligning equations 
+\begin{align}
+	   E = m c^2
+\end{align}
+As the smaller particle exhibits dual nature, and energy being the same, de Broglie equated 1 \& 2 for the particle moving with velocity `v' as
+$$\frac{hc}{\lambda} = m v^2$$ % Mathematical formula
+Then,           % Mathematical formula
+		$\frac{h}{\lambda} = mv $ or $\lambda = \frac{h}{mv} = \frac{h}{\text{momentum}}$: 
+		where `h' is the Plank's constant. We know $7 + 3 = 10$.\\
+We have derived this from \cite{verma2008concepts}.\\ % cite referencing
+Lets check different mathematical functions in \LaTeX
+
+
+% sub section of Mathematics that is Matrices starting
+\subsection{Matrices}
+%Representing a matrix
+$\begin{bmatrix}
+\sqrt{2}  & \sqrt{3}  &  \sqrt{5}\\
+\sqrt{7}  & \sqrt{11} &  \sqrt{13}\\
+\sqrt{23} & \sqrt{19} &  \sqrt{17}
+\end{bmatrix}$
+% sub section of Mathematics that is Matrices ending
+
+% sub section of Mathematics that is Squareroot starting
+\subsection{Squareroot}
+Although illustrated above, we use square root again for the equation $ ax^2+bx+c=0$, the roots are given by
+	$$x = \frac{-b \pm \sqrt{b^2-4ac}}{2ac}$$ \\%mathematical formula
+This is the basic equation which study in class 10th \cite{education2016mathematics} %cite referencing
+% sub section of Mathematics that is Squareroot ending
+
+\newpage
+
+% sub section of Mathematics that is Integration starting
+\subsection{Integration}
+The definite integral of a continuous function $f$ over the interval $[a,b]$ denoted by $\int_{a}^{b} f(x)dx$ is the limit of a Riemann sum as the number of subdivisions approaches infinity. This definition is cited from \cite{ghorpade2018course} %cite referencing
+% sub section of Mathematics that is Integration ending
+
+% sub section of Mathematics that is Summation starting
+\subsection{Summation}
+Riemann sum can be given by:%mathematical formula
+		$$
+		lim_{n\rightarrow \infty}\sum_{i=0}^{n}\delta x f(x_i) 
+		$$
+% sub section of Mathematics that is Summation ending
+
+% sub section of Mathematics that is Nested brackets starting
+\subsection{Nested brackets}%mathematical formula
+$ \left[\frac{\Bigg(\bigg[\Big(\left[\frac{\left(xy\right)}{z}\%w\right]+7\Big)-10\bigg]8\Bigg)}{\Bigg(\bigg[\Big(\left[\frac{\left(zy\right)}{x}\%u\right]+17\Big)-1\bigg]5\Bigg)}\right] $
+% sub section of Mathematics that is Nested brackets ending
+\newpage
+
+\begin{figure}
+\begin{center}
+    \includegraphics[scale=0.7]{covid.png} %inserting figure
+    \caption{Graphic image} %giving caption to the above figure
+\end{center}
+\end{figure}
+%Beginning of a table
+\begin{table}
+
+\begin{tabular}{|l|l|l|}
+\hline 
+    Characteristics              & Chloroquine (n = 10)    & P-value*\\ 
+                       \hline
+                       \hline
+    Age, year                    &  41.5 (33.8-50.0)        & 0.09 \\ 
+                       \hline 
+     Female, n (\%)                &  3 (70.00)               & 0.41\\ 
+                       \hline 
+     Days from onset to treatment & 2.50 (2.00-3.75) 6.50   & !`0.001\\ 
+    \hline 
+    Height, cm                   & 167.50 (158.00-173.00)  &  0.97 \\  
+                       \hline 
+\end{tabular}
+\caption{Treatment}
+\label{tab:Treatment} %labelling so that we can use for cross referencing
+\end{table} 
+%Ending of a table
+
+                  % Lists and figures and tables starting
+                  
+\section{Lists and figures and tables}
+\label{sec :l}
+\begin{itemize}
+
+\item A novel coronavirus disease 2019 (COVID-19) emerged around December
+2019 in Wuhan, China and has spread rapidly worldwide (Lu et al., 2020).
+
+\item Until March 27, 2020, the Chinese health authorities had reported 82082 confirmed COVID-19 cases in China with 3298 deaths and 381443 con-
+firmed cases with 20787 deaths outside China.
+\vspace{4mm}
+	
+\end{itemize}
+
+\begin{enumerate}
+
+\item Coronavirus relies on cellular machinery to replicate itself, thus providing a rationale to search for effective therapies among agents that may impact pathways required for the viral life cycle.
+
+\item he vesicular trafficking system plays a critical role in viral entry, unpacking, assembly, and packaging. Among agents that can interfere with normal vesicular trafficking are several drugs approved for human therapies.
+
+\item well-known antimalaria drug, Chloroquine, stands out as one of the earliest reagents that can block vesicular trafficking and also interfere with the life cycle of parasites and viruses.
+	
+\end{enumerate}
+\par{We can see from Figure~\ref{gra:cases} that the covid cases in India in June were already reaching high values.}%Cross-refering to figure
+\vspace{4mm}
+
+\par{It is evident from Figure~\ref{gra:inform} that we should stay informed about covid.}%Cross-refering to figure
+\vspace{4mm}
+
+\par{We see table~\ref{tab:Treatment} which shows recovery rates by chloroquinone\\ The above data is derived from research paper on covid \cite{huang2020treating}}%Cross referencing to table and %cite referencing
+\newpage
+\begin{figure}
+\begin{center}
+\includegraphics[scale=1.05]{c19.jpg}  %inserting a figure 
+\caption{Cases in india} %giving caption to the above figure
+\label{gra:cases} %labelling so that we can use for cross referencing
+\end{center}
+\end{figure}
+
+\begin{figure}
+\begin{center}
+\includegraphics[scale=0.2]{cov.png} %inserting a figure  
+\caption{Stay Informed}%giving caption to the above table
+\label{gra:inform} %labelling so that we can use for cross referencing
+\end{center}
+\end{figure}
+\textbf{Following is description type list}
+
+\begin{description}
+\item[CS 213] Lorem ipsum dolor sit amet, \textbf{Turned the text bold consectetur adipiscing elit, sed do eiusmod tempor incididunt} ut labore etdolore magna aliqua. \textit{   Italics Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.}
+\end{description}
+\begin{description}
+\item[HS 201] Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eius-
+mod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+minim veniam.
+\end{description}
+
+\newpage
+{\pagecolor{green} %color of the page will be green
+\begin{table}[h!]
+    \centering %table will be in center
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+    Names & \multicolumn{2}{|c|}{Maths} & \multicolumn{2}{|c|}{Science} \\
+    \hline
+    \multirow{2}{*}{Lorem} & X & Y & Z & W \\
+    \hhline{|~|-|-|-|-|}
+      & S & R & V & U \\
+    \hline
+    \multirow{2}{*}{Ipsum} & 3 & 2 & 0 & 1 \\
+    \hhline{|~|-|-|-|-|}
+      & T & O & P & Q \\
+      \hline
+    \multirow{2}{*}{Lorm} & A & B & C & D \\
+    \hhline{|~|-|-|-|-|}
+      & 2 & 3 & 1 & 0 \\
+      \hline
+    \end{tabular}
+    
+    \caption{Scores}%giving caption to the above table
+    \label{tab: scores}%labelling so that we can use for cross referencing
+\end{table}
+\section{Fonts} 
+\label{sec: f}%labelling so that we can use for cross referencing
+Till now we have seen \textcolor{red}{mathematical formulae} in \colorbox{blue}{section~\ref{sec :m}} and \textcolor{red}{covid data} with figures and tables in \colorbox{blue}{section~\ref{sec :l}}. In \colorbox{blue}{section~\ref{sec: f}} we will use font properties.%cross referencing
+\begin{itemize}
+\item Bold-\textbf{This text is bold.} %words will be in bold
+\item Italics-\textit{This text is italic.}%words will be in italic
+\item teletype-\texttt{This text is teletype.}%words will be in teletype
+\item emphasize-\emph{This text is emphasized.}%words will be emphasized
+\item Roman-\rm{This text is roman font family.}%words will be in roman font
+\item sans serif-\textsf{ This text is sans serif font family.}%words will be in sans serif
+\item slant-\textsl{This text is slant.}%words will be slanted
+\item small capital-\textsc{This text is small capital.}%words will be in small capital
+\item uppercase-\uppercase{This text is uppercase.}%words will be in upper case
+\item lowercase-\lowercase{This text is lowercase.}%words will be in lower case
+\end{itemize}
+\par {The table~\ref{tab: scores} is a multi-column and multi-row table.}
+}
+{\newpage
+\pagecolor{white}
+\section{Psuedo Code}
+ \begin{algorithmic}
+\Function{\textsc{Quicksort}}{$A[\ ],p,r$}
+\If {$p < r$ } 
+\State $q \gets \textsc{Partition}(A,p,r)$
+\State \textsc{Quicksort}$(A,p,q-1)$
+\State \textsc{Quicksort}$(A,q+1,r)$
+\EndIf
+\EndFunction
+
+\Function{\textsc{Partition}}{$A[\ ],p,r$} $x \gets A[p] \texttt{ } i \gets p - 1$ 
+      \For{$j \gets p \text{ to } r - 1$}
+        \If {$A[j]<x $} 
+\State $i++$
+\State swap($A[i],A[j]$) 
+\EndIf
+      \EndFor
+\State    swap($A[i+1],A[r]$)  
+\State \Return ($i+1$) 
+\EndFunction
+\end{algorithmic}
+The Algorithm is derived taking hint from \cite{hoare1962quicksort}.%cite referencing
+}
+
+\newpage
+
+%bibliography starts from here
+\bibliographystyle{ieeetr}
+\bibliography{test}
+
+\end{document}
