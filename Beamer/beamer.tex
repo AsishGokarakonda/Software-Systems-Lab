@@ -1,0 +1,216 @@
+\documentclass{beamer}
+\usepackage{url}
+\usepackage{colortbl}
+\usepackage{xcolor}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{lipsum}
+\usepackage{mathtools}
+\usetheme{Warsaw}
+\usefonttheme{serif}
+
+%from here title page begins
+%below commands are used to display title,subtitle,author,institute,email id and date in order
+\title{Assignment-2} 
+\subtitle{Software Systems Lab}
+\author{\textit{"Gokarakonda Sri Sai Asish"}}
+\institute{IIT Dharwad \newline \url{https://www.iitdh.ac.in/}}
+\date{August 11, 2021}
+
+\begin{document}
+\begin{frame}%this is to create frame
+\titlepage 
+\begin{figure}
+\centering%this is for centering the figure
+  \includegraphics[height=2.5cm,width=2.9cm]{Image 2.jpeg} %this is to insert a figure
+\end{figure}
+\end{frame}
+
+
+\begin{frame}{Dynamic Programming}%this is to create frame
+\transblindshorizontal%transistions
+\label{dyano}
+\begin{itemize}%this is to create list of items
+\item Characteristics of Dynamic Programming
+   \begin{enumerate}
+    \item \textit{Overlapping Sub-problems} 
+      \begin{block}{1}%this is to create a block
+      Subproblems are smaller versions of the original problem. Any problem has overlapping sub-problems if finding its solution involves solving the same subproblem multiple times. 
+      \end{block}
+      \item \textit{Optimal Substructure}      
+      \begin{block}{2}%this is to create a block
+        Any problem has optimal substructure property if its overall optimal solution can be constructed from the optimal solutions of its subproblems.
+      \end{block}
+   \end{enumerate}
+   \end{itemize}
+\end{frame}
+
+
+\begin{frame}[t]{DP Methods}%this is to create frame
+\transblindshorizontal%transistions
+\vspace{10pt}
+\begin{itemize}%this is to create list of items
+  \item \textbf{Top-down with Memoization}  %this is used to make text bold
+   \begin{block}{1}%this is to create a block
+   In this approach, we try to solve the bigger problem by recursively finding the solution to smaller sub-problems. Whenever we solve a sub-problem, we cache its result so that we don't end up solving it repeatedly if it's called multiple times. Instead, we can just return the saved result.
+   \end{block}
+   \only<2>{\item \textbf{Bottom-up with Tabulation}%this is used to make text bold
+   \begin{alertblock}{2}%this is to create block with red color
+   Tabulation is the opposite of the top-down approach and avoids recursion. In this approach, we  solve the problem ``bottom-up" (i.e. by solving all the related sub-problems first).
+   \end{alertblock}}     
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Algorithms}%this is to create frame
+\transblindshorizontal%transistions
+\label{algos}%this is label to use in hyperlink
+\transdissolve  %transistions
+
+\setbeamercovered{transparent}
+\begin{itemize}
+    \item Divide and conquer \pause %this is for content present below wont appear 
+    \invisible \item Greedy Algorithm \pause%this is for content present below wont appear 
+    \invisible \item Dynamic Programming 
+\end{itemize}
+    
+\end{frame}
+\begin{frame}%this is to create frame
+\transblindshorizontal%transistions
+\frametitle{Divide and Conquer}%this is to add title to the frame
+\label{dc}%labelling so that we can do cross referencing
+Example:\\
+\textbf{Quick-Sort:  The average case run time of quick sort is }%this is used to make text bold
+$O(n \ast log\ n)$\textbf{.This case happens when we don't exactly
+get evenly balanced partitions.}%this is used to make text bold
+\end{frame}
+
+
+\begin{frame}%this is to create frame
+\transblindshorizontal%transistions
+\frametitle{Divide and Conquer}%this is to add title to the frame
+\color{red}{Example:}\\
+\color{black}{Merge-Sort: }\color{orange}{The time complexity of Merge Sort is $ O(n \ast log\ n)$. Merge Sort is useful for sorting linked lists in $O(n \ast log\ n)$ time.}%to change textcolor we used \textcolor
+\end{frame}
+
+
+\begin{frame}%this is to create frame
+\transblindshorizontal%transistions
+\frametitle{Hyperlinks}%this is to add title to the frame
+\begin{itemize}%this is to create list of items
+\item \hyperlink{algos}{Divide and Conquer}%this is used to make a hyperlink,so when we click on that it will take us to another page
+\item  \hyperlink{algos}{\beamergotobutton{Greedy Algorithm}}%this is used to make a hyperlink,so when we click on that it will take us to another page
+\item  \hyperlink{algos}{\beamerskipbutton{Dynamic Programming}}%this is used to make a hyperlink,so when we click on that it will take us to another page
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}{List of Data Structures}%this is to create frame
+\transblindshorizontal%transistions
+\setbeamersize{descriptionwidth=0.65cm}
+\setbeamercovered{transparent}
+    \begin{itemize}%this is to create items
+        \item Primitive \pause
+        \item Non-Primitive \pause  \newline \\
+        \onslide<3->
+        \begin{itemize}%this is to create items
+            \item \textit{Linear}
+            \begin{description}
+                \item[$\bullet$]<4-> \textbf{Static}%this is used to make text bold
+                \begin{enumerate}%this is to start enumerate
+                    \item<5-> Array \newline
+                \end{enumerate}
+                \item[$\bullet$]<4-> \textbf{Dynamic}%this is used to make text bold
+                \begin{enumerate}%this is to start enumerate
+                    \item<5-> Linked List
+                    \item<5-> Stack
+                    \item<5-> Queue \newline
+                \end{enumerate}
+            \end{description}
+            \onslide<6->
+            \item \textit{Non-Linear}%this is used to make text italic
+            \begin{enumerate}%this is to start enumerate
+                \item<6-> Tree
+                \item<6-> Graph
+            \end{enumerate}
+        \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Data Structures}%this is to create frame
+\begin{figure}
+\centering
+\includegraphics[width=9cm]{Image 1.jpeg}%this is to insert a figure 
+\caption{1}
+
+\end{figure}
+\end{frame}
+
+
+\begin{frame}%this is to create frame
+\transblindshorizontal%transistions
+ \begin{table}%this is to create a table
+
+\begin{tabular}{|l|c|c|c|} %used to create a table
+\hline 
+Algorithm              & Best Case      & Average Case            & Worst Case    \\
+\hline
+\hline 
+Linear Search          &  $O(1)$        & $O(n)$                  &   $O(n)$      \\ 
+
+Binary Search          &  $O(1)$        & $O(log\ n)$             &  $O(log\ n)$  \\ 
+
+Bubble sort            & $O(n)$         &  $O(n^2)$               &$O(n^2)$       \\ 
+
+Selection sort         & $O(n^2)$       &  $O(n^2)$               &$O(n^2)$       \\
+ \hline   
+\end{tabular}
+\caption{1}
+\end{table}
+
+\begin{block}{Theorem (Trigonometric Identity)}%this is to create a block
+$Sin^2\theta + Cos^2\theta = 1$
+\end{block}
+\end{frame}
+
+
+\begin{frame}%this is to create frame
+\transblindshorizontal %transistions
+\begin{theorem}
+    Let a, b, c be lengths of right angled triangle.\newline
+    \textbf{By definition}%this is used to make text bold
+    \[sin\theta=b/c\left(\frac{oppositeside}{hypotenuse}\right)\]
+\[cos\theta=a/c\left(\frac{adjacentside}{hypotenuse}\right)\]
+\(sin^2\theta+cos^2\theta=\frac{b^2}{c^2}+\frac{a^2}{c^2}=\frac{a^2+b^2}{c^2}\)\\
+    \bigskip%for getting space
+    \textbf{From Pythagoras theorem}\newline
+ 
+    $c^2 = a^2 + b^2$ \newline
+    
+    \(\frac{a^2+b^2}{c^2} = 1\ \Longrightarrow \  sin^2\theta+cos^2\theta = 1\)\\
+    \bigskip %for getting space
+    \textbf{Hence Proved.}%this is used to make text bold
+    \end{theorem}
+\end{frame}
+
+\begin{frame}{Multi-line equations}%this is to create frame
+\transblindshorizontal%transistions
+\begin{align*}%this is used to align equations
+    f(x) = x^6 + 7x^3y + 50x^3y^2 & + 12x^2y^4 \\
+                                  &- 19x^5y^4 - 10x^7y^6 + 7y^4 - m^3n^3
+\end{align*}
+\vspace{-5mm}
+\begin{align*}%this is used to align equations
+%rho,delta,tau are used for signs
+\rho \Delta x \Delta y \Delta z \Delta \tau \partial_t c_i(t,x,\tau) 
+&= \rho \Delta x \Delta y \Delta z \Delta \tau (p_i-d_i)  \\
+&- \rho \Delta y, \Delta z \Delta \tau [q_{i,x}(t,x+\Delta x/2, y, z, \tau)\\
+&\qquad - q_{i,x}(t,x - \Delta x/2, y, z, \tau)]\\
+&- \rho \Delta x, \Delta z \Delta  \tau [q_{i,y}(t,x,y+\Delta y/2, y, z, \tau)\\
+&\qquad - q_{i,y}(t,x,y - \Delta y/2, z, z, \tau)]\\
+&- \rho \Delta x \Delta y \Delta \tau[q_{i,z}(t,x,y,z+\Delta z/2, \tau) \\
+&\qquad - q_{i,z}(t,x,y,z-\Delta z/2, \tau)]
+\end{align*}
+
+\end{frame}
+
+\end{document}
