@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Palindrome check</title>   
+   
+        <style>
+            body{
+                background-color: black;
+                font-size: 25px;
+            }
+            .form{
+                color: white;    
+                padding: 100px 100px;  
+                border-radius: 20px; 
+            }
+            #checking{
+                padding: 5px 15px;
+                width: 30%;
+            }
+            #heading{
+                display: flex;
+                justify-content: center;
+                color: chartreuse;
+                padding: 30px 30px;
+                margin: 20px 20px;
+                font-size: 56px;
+            }
+            .button{
+                padding: 10px 30px;
+                margin: 35px auto;
+            }
+        </style>
+    
+</head>
+<body>
+    <header id="heading">
+       <b><i><u>Palindrome Checker</u></i></b>
+    </header>
+    <form style="border: 2px solid red;" class="form">
+       <b> Enter word/sentence to check for palindrome : </b>
+        <input type="text" name="palin" id="checking"><br>
+        <input type="button" class="button" value="Check Palindrome" onclick="palindrome()">
+        </form>
+    
+    <script>
+        function palindrome()
+        {
+            var str=document.getElementById("checking").value;
+            var str=str.replace(/\s/g,"").toLowerCase();// to remove all white spaces
+            var input=str.split(""); //the string is divided into each character by split("")
+            var final=input.reverse().join("");//each character is joined in reverse order 
+            if(str==final) {
+                alert('The string is a palindrome.');
+            }
+            else {
+                alert('The string is not a palindrome.');
+            }
+            window.location.reload(true);
+        }
+    </script>
+</body>
+</html>

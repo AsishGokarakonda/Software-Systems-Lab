@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mysquel Php</title>
+  <style>
+    body {
+      background-color: black;
+      color: white;
+      font-size: 18px;
+      font-family: sans-serif;
+    }
+
+    h1 {
+      color: chartreuse;
+      text-decoration: underline;
+    }
+
+    .button {
+      padding: 9px 20px;
+      width: 13%;
+    }
+
+    .firstcontainer{
+      border: 3.5px solid whitesmoke;
+      border-radius: 40px;
+      padding: 24px 31px;
+      padding-bottom: 23px;
+    }
+    .container {
+      border: 3.5px solid red;
+      border-radius: 40px;
+      padding: 24px 31px;
+      padding-bottom: 7px;
+    }
+
+  </style>
+</head>
+
+<body>
+  <form action="database.php" method="POST">
+    <center>
+    <h1 style="color: yellow;">Displays all the records in both author and titles table: </h1>
+    <div class="firstcontainer">
+      <input class="button" type="submit" value="Authors" name="authors_show">
+      <input class="button" type="submit" value="Titles" name="show_titles">
+    </div>
+  </center>
+
+    <h1>Add a Record </h1>
+    <div class="container">
+      <label for="input_author1">Author: </label>
+      <input type="text" name="input_author1" id="input_author1">
+      <label for="publisher1">Publisher: </label>
+      <input type="text" name="publisher1" id="publisher1"><br><br>
+      <input class="button" type="submit" name="add_authors" value="Add to Table Authors"><br><br>
+      <label for="title_1">Title: </label>
+      <input type="text" name="title_1" id="title_1">
+      <label for="input_author2">Author: </label>
+      <input type="text" name="input_author2" id="input_author2">
+      <label for="year1">Year: </label>
+      <input type="text" name="year1" id="year1"><br><br>
+      <input class="button" type="submit" name="add_titles" value="Add to Table Titles"><br><br>
+    </div>
+
+
+    <h1>Delete a Record</h1>
+    <div class="container">
+      <label for="input_author1_delete">Delete Author: </label>
+      <input type="text" name="input_author1_delete" id="input_author1_delete"><br><br>
+      <input class="button" type="submit" name="delete_author" value="Delete from Table Authors"><br><br>
+      <label for="title_1_delete">Delete Title: </label>
+      <input type="text" name="title_1_delete" id="title_1_delete"><br><br>
+      <input class="button" type="submit" name="delete_title" value="Delete from Table Titles"><br><br>
+    </div>
+
+    <h1>Updating year for a given title </h1>
+    <div class="container">
+      <label for="title2">Title: </label>
+      <input type="text" name="title2" id="title2"><br><br>
+      <label for="year2">New Year: </label>
+      <input type="text" name="year2" id="year2"><br><br>
+      <input class="button" type="submit" name="update_title" value="Update Year"><br><br>
+    </div>
+
+
+    <h1>Displays its author and year of publication </h1>
+    <div class="container">
+      <label for="book_title">Title Of The Book: </label>
+      <input type="text" name="book_title" id="book_title"><br><br>
+      <input class="button" type="submit" name="show_book" value="Display"><br><br>
+    </div>
+
+
+    <h1>Displays Book Details of a Publisher </h1>
+    <div class="container">
+      <label for="publisher_details">Publisher: </label>
+      <input type="text" name="publisher_details" id="publisher_details"><br><br>
+      <input class="button" type="submit" name="show_details" value="Display Details"><br><br>
+    </div>
+
+  </form>
+</body>
+
+
+</html>

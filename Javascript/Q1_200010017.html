@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Age Check</title>
+    <style>
+        body {
+            font-size: 24px;
+            background-color: black;
+            color: white;
+        }
+
+        #btn {
+            padding: 4px 30px;
+            margin: 40px 72px;
+        }
+
+        #box {
+            margin: 40px 72px;
+        }
+
+        .form {
+            display: flex;
+            padding: 30px 30px;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="form" style="color: greenyellow;font-size: 40px;">
+        <b> Drivers License Eligibility Check </b>
+    </p>
+    <form action="" style="border: 2px solid red;" class="form">
+        <div id="box">
+            <span>Enter Your Age: </span>
+            <input type="text" id="age" placeholder="Enter your age">
+        </div>
+        <button onclick="verify()" id="btn">Submit</button>
+    </form>
+
+    <script>
+        function verify() {
+            var no;
+            no = (document.getElementById("age").value);
+            console.log(no.charCodeAt(0));
+            if (no.charCodeAt(0) >= 48 && no.charCodeAt(0) <= 57) {
+                if (no >= 18 && no <= 100) {
+                    alert("You are eligible!");
+                }
+
+                else {
+                    alert("Your age must lie between 18 and 100 to be eligible for license");
+                }
+
+            }
+            else{
+                alert('please enter a valid age (number)');
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

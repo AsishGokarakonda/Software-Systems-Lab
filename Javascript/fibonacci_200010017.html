@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Fibonacci</title>
+</head>
+<style>
+    body {
+        background-color: black;
+        font-size: 20px;
+        color: white;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .head {
+        text-align: center;
+        border: 2px solid red;
+        padding: 85px;
+        border-radius: 25px;
+    }
+
+    #button {
+        padding: 12px 35px;
+        margin: 50px 30px;
+    }
+
+    #result {
+        height: 100%;
+        width: 100%;
+        border: 2px solid red;
+        font-family: cursive;
+    }
+</style>
+<html>
+
+<body>
+
+    <div class="head">
+        <h1 style="color: #0026f1;"><u><b><em> Fibonacci Generator</em></b></u></h1>
+        <span>Enter a number to generate Fibonacci series</span>
+        <input type="number" id="fibnum">
+        <div>
+            <button onclick="myFunction()" id="button">get series</button>
+        </div>
+
+        <textarea id="result" rows="11"></textarea>
+    </div>
+    <script>
+        function myFunction() {
+            var n = document.getElementById("fibnum").value;
+            if (n.charCodeAt(0) >= 48 && n.charCodeAt(0) <= 57 && n != 0) {
+                var final = parseInt(n);
+                document.getElementById("result").innerHTML = fibonacciGenerator(final);
+            }
+            else {
+                alert("please enter a number greater than 0");
+                window.location.reload(true);
+            }
+        }
+
+        var sequence = [0]; 
+        var a = 1;
+        var b = 0;
+        var total = 0;
+
+        function fibonacciGenerator(n) {
+
+            while (sequence.length < n) {
+                total = a + b;
+                a = b;
+                b = total;
+                sequence.push(total);
+
+            }
+            return (sequence);
+        }
+    </script>
+
+</body>
+
+</html>

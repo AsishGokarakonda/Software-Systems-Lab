@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Adding to lists</title>
+    <style>
+        body {
+            background-color: black;
+            font-size: 20px;
+            color: wheat;
+        }
+        #candidate {
+            padding: 9px 23px;
+            margin: 10px 10px;
+            width: 20%;
+        }
+        #add{
+            color: black;
+            padding: 10px 10px;
+        }
+        ul{
+            color: red;
+        }
+    </style>
+</head>
+
+
+<body>
+    <center>
+        <h1> <em> Add Items To List</em></h1>
+        <hr>
+        <div>
+            <input type="text" id="candidate" required>
+            <div>
+                <button disabled onclick="addItem()" id="add" type="button">Add Item</button>
+            </div>
+        </div>
+    </center>
+
+    <h1 style="margin: 45px 10px; color: chartreuse;">Items You Added Till Now Are Displayed Below :</h1>
+
+        <ul id="listcreation">
+
+
+        </ul>
+</body>
+
+</html>
+<script>
+    
+    const addbtn = document.getElementById('add');
+    const text = document.getElementById('candidate');
+    text.addEventListener("keyup", (e) => {
+        const value = e.currentTarget.value;
+        if (value === "") {
+            addbtn.disabled = true;
+        }
+        else {
+            addbtn.disabled = false;
+        }
+    });
+
+    function addItem() {
+        var ulist = document.getElementById("listcreation");
+        var candidate = document.getElementById("candidate");
+        var li = document.createElement("li");
+        li.setAttribute('id', candidate.value);
+        li.appendChild(document.createTextNode(candidate.value));
+        ulist.appendChild(li);
+    }
+</script>
+</body>
+
+</html>

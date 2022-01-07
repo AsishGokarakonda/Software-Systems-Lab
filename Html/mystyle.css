@@ -1,0 +1,92 @@
+body{
+    font-family: sans-serif;
+    font-size: 19px;
+    background-color: black;
+    color: white;
+}
+
+.navmenu li{
+    list-style: none;
+    float: left;
+    padding: 19px;
+    border: 3px solid blue;
+    border-radius: 16px;
+    margin: 30px;
+    text-decoration: none;  
+}
+.navmenu li:hover{
+    background-color: rgb(248, 0, 0);
+}
+
+.navmenu ul{
+    overflow: auto;
+}
+.navmenu{
+    background-color: white;  
+    border-radius: 40px; 
+    
+}
+#searchbox{
+    padding: 8px 36px;
+    float: right;
+    margin: 40px 89px;
+}
+#webpagetitle{
+    font-size: 70px;
+    
+}
+#firstpara{
+        padding: 3px 3px;
+        margin: 1px;
+        font-size: 23px;
+}
+#image{
+    width: 30%;
+}
+.description-left{
+    text-align: left;
+}
+#stepsimages{
+    float: left;
+    margin: 0px 20px;
+    width: 28%;
+
+}
+#tricepsimage{
+    float: left;
+    margin: 0px 20px;
+    width: 33%;
+
+}
+
+table th,tr,td{
+    border: 2px solid grey;
+    padding: 7px 6px;
+}
+.container h1 {
+    text-align: center;
+}
+
+.container button {
+    display: block;
+    width: 20%;
+    margin: 25px auto;
+    padding: 11px;
+}
+.container {
+    border: 2px solid white;
+    margin: 106px auto;
+    padding: 30px;
+    width: 33%;
+    border-radius: 28px;
+}
+.form-group input {
+    font-family: Georgia, 'Times New Roman', Times, serif,cursive;
+    text-align: center;
+    display: block;
+    width: 390px;
+    padding: 2px;
+    margin: 10px auto;
+    font-size: 25px;
+    border-radius: 25px;
+}

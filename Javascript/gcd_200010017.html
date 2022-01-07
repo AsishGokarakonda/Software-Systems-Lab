@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> GCD Finder </title>
+   <style>
+       body{
+           background-color: black;
+           color: white;
+           font-size: 20px;
+       }
+       .head{
+           display: flex;
+           justify-content: center;
+           color: chartreuse;
+           font-size: 30px;
+       }
+       .block{
+           text-align: center;
+           border: 2px solid red;
+           padding: 85px;
+           border-radius: 25px;
+       }
+       .btn{
+           padding: 10px 40px;
+       }
+       .result{
+           border: 5px solid yellow;
+           padding: 30px;
+           margin: 65px auto;
+           width: 20%;
+           border-radius: 40px;
+           font-size: 30px;
+        }
+   </style>
+</head>
+<body>
+
+
+<div class="main">
+    <div class="head">
+        <h2> <em><b><u> GCD Finder</u> </b></em></h2>
+    </div>
+
+    <div  class="block" >
+        <span>Enter the first number : </span>
+    <input type="number" placeholder="Enter the first number" id="firstnum" > <br> <br>
+    <span>Enter the second number : </span>
+    <input type="number" placeholder="Enter the second number" id="secondnum" > <br> <br> <br>
+
+    <button class="btn" type="button" onclick="getInputValue();">Get Value</button>
+    <div class="result">
+       <b>GCD = <span id="gcd"></span></b> 
+    </div>
+    </div>
+    
+</div>
+
+
+
+<script>
+
+    function gcd(a, b) {
+    var R;
+    while ((a % b) > 0)  {
+        R = a % b;
+        a = b;
+        b = R;
+    }
+    return b;
+    }
+
+    function getInputValue(){
+        var firstnum=document.getElementById('firstnum').value;
+        var secondnum=document.getElementById('secondnum').value;
+        if(!(Number.isInteger(parseInt(firstnum))) || !(Number.isInteger(parseInt(secondnum))))
+			{
+				alert("Please enter valid integers");
+                window.location.reload(true);
+			}
+            else{
+                document.getElementById("gcd").innerHTML = gcd(firstnum, secondnum); 
+
+            }
+        
+    }
+
+</script>
+</html>

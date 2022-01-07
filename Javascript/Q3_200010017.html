@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>most occuring character calculator</title>
+    <style>
+        body {
+            background-color: whitesmoke;
+            font-size: 20px;
+            color:#3e08ff;
+
+        }
+
+        .container {
+            padding: 10px 10px;
+            margin: 30px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            display: flex;
+            margin:  auto;
+            padding: 10px 30px;
+            border-radius: 10px;
+            font-size: 18px;
+        }
+        button:hover{
+            background-color: rgb(255, 5, 242);   
+        }
+
+        
+        span{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        Enter the string here: 
+        <input type="text" id="tex">
+    </div>
+    <button onclick="check()"> Compute</button>
+    <div id="ocuurence">
+        <ul>
+            <li> Most Frequent character: <span id="resultchar"></span> </li>
+            <li> Number of occurrences: <span id="resultnum"></span> </li>
+
+        </ul>
+
+    </div>
+    <script>
+        function check() {
+            let str = document.getElementById('tex').value;
+            if (str === '') {
+                document.getElementById('resultchar').innerHTML = '';
+                document.getElementById('resultnum').innerHTML = '';
+                alert('please enter a string');
+                  
+            }
+            else {
+
+                let key;
+              
+                let str1 = str.replace(/,/g,'');
+
+                let arr = [];
+                for (i = 0; i < 256; i++) {
+                    arr.push(0);
+                }
+ 
+                for (j = 0; j < str1.length; j++) {
+                    if((str1[j]).charCodeAt(0) == 32){
+                        arr[(str1[j]).charCodeAt(0)]=-1
+                    }
+                   else{
+                        arr[(str1[j]).charCodeAt(0)]++;
+                   }
+                }
+                console.log(arr);
+                console.log(Math.max(...arr));
+                document.getElementById('resultnum').innerHTML = Math.max(...arr)
+                let max = 0;
+               
+
+                for (k = 0; k < str1.length; k++) {
+                    if (max < arr[(str1[k]).charCodeAt(0)]) {
+                        max = arr[str1[k].charCodeAt(0)];
+                        
+                    }
+                }
+                document.getElementById('resultchar').innerHTML = '';
+                var temp = str1.split('');
+                var sorted1 = temp.sort();
+                var sorted = sorted1.join('');
+                console.log(sorted)
+                
+                let x = [];
+
+                for (l = 0; l < str1.length; l++) {
+                    if(sorted[l].charCodeAt(0) == 32){
+                        continue;
+                    }
+                    else{
+                    if (max == arr[sorted[l].charCodeAt(0)]) {
+                        if (sorted[l] == sorted[l + 1]) {
+                            continue;
+                        }
+                        else {
+                            console.log(sorted[l]);
+                            x = x + sorted[l] + ',';
+                        }
+                    }
+                }
+            }
+                for (i = 0; i < x.length - 1; i++) {
+                    console.log(x[i]);
+                    document.getElementById('resultchar').innerHTML += x[i];
+                }
+
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
